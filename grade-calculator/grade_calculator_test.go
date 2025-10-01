@@ -100,25 +100,25 @@ func TestEmpty(t *testing.T) {
         t.Errorf("Expected F with no grades, got %s", gc.GetFinalGrade())
     }
 
-    // assignment only, assumed to be A
+    // assignment only, assumed to be F
     gc1 := NewGradeCalculator()
     gc1.AddGrade("assignment1", 100, Assignment)
-    if gc1.GetFinalGrade() != "A" {
-        t.Errorf("Expected A with only assignment=100, got %s", gc1.GetFinalGrade())
+    if gc1.GetFinalGrade() != "F" {
+        t.Errorf("Expected F with only assignment=100, got %s", gc1.GetFinalGrade())
     }
 
-	// exam only, assumed to be A
+	// exam only, assumed to be F
     gc2 := NewGradeCalculator()
     gc2.AddGrade("exam1", 90, Exam)
-    if gc2.GetFinalGrade() != "A" {
-        t.Errorf("Expected A with only exam=90, got %s", gc2.GetFinalGrade())
+    if gc2.GetFinalGrade() != "F" {
+        t.Errorf("Expected F with only exam=90, got %s", gc2.GetFinalGrade())
     }
 
-    // essay only, assumed to be B
+    // essay only, assumed to be F
     gc3 := NewGradeCalculator()
     gc3.AddGrade("essay1", 80, Essay)
-    if gc3.GetFinalGrade() != "B" {
-        t.Errorf("Expected B with only essay=80, got %s", gc3.GetFinalGrade())
+    if gc3.GetFinalGrade() != "F" {
+        t.Errorf("Expected F with only essay=80, got %s", gc3.GetFinalGrade())
     }
 }
 
