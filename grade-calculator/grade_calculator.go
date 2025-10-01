@@ -1,4 +1,4 @@
-sapackage esepunittests
+package esepunittests
 
 type GradeCalculator struct {
 	assignments []Grade
