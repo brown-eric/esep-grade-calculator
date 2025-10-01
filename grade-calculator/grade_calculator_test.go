@@ -141,3 +141,16 @@ func TestMultipleGradesAverage(t *testing.T) {
         t.Errorf("Expected B with mixed averages, got %s", grade)
     }
 }
+
+func TestGradeTypeString(t *testing.T) {
+    if Assignment.String() != "assignment" {
+        t.Errorf("Expected 'assignment', got %s", Assignment.String())
+    }
+    if Exam.String() != "exam" {
+        t.Errorf("Expected 'exam', got %s", Exam.String())
+    }
+    if Essay.String() != "essay" {
+        t.Errorf("Expected 'essay', got %s", Essay.String())
+    }
+}
+
