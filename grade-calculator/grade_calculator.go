@@ -1,7 +1,7 @@
 package esepunittests
 
 type GradeCalculator struct {
-	grades []Grade // ✅ single slice for all grades
+	grades []Grade
 }
 
 type GradeType int
@@ -69,7 +69,7 @@ func (gc *GradeCalculator) calculateNumericalGrade() int {
 	return int(weightedGrade)
 }
 
-// helper to compute averages for a specific grade type
+// helper for averages
 func computeAverageByType(grades []Grade, targetType GradeType) int {
 	sum := 0
 	count := 0
